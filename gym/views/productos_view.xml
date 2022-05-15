@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo gym.productos -->	
+		<record model="ir.ui.view" id="productos_form">
+		<field name="name">gym.productos.form</field>
+		<field name="model">gym.productos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de Producto">
+                    <field name="name" placeholder="ID_Producto" />
+                    <field name="nombre" placeholder="Nombre Producto"/>
+                    <field name="precio" placeholder="Precio"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo gym.productos -->	
+		<record model="ir.ui.view" id="gym_productos_tree">
+			<field name="name">gym.productos.tree</field>
+			<field name="model">gym.productos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Productos" >
+						<field name="name" />
+						<field name="nombre" />
+						<field name="precio" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="gym_productos_search">
+			<field name="name">gym.productos.search</field>
+			<field name="model">gym.productos</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="nombre" />
+					<field name="precio" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO gym.productos -->	
+		<record id="gym_productos_action" model="ir.actions.act_window">
+			<field name="name">Productos</field>
+			<field name="res_model">gym.productos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+</odoo>

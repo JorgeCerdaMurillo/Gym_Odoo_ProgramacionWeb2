@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo gym.instructores -->	
+		<record model="ir.ui.view" id="instructores_form">
+		<field name="name">gym.instructores.form</field>
+		<field name="model">gym.instructores</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de Instructor">
+                    <field name="name" placeholder="ID_Instructor" />
+                    <field name="nombre_inst" placeholder="Nombre y Apellidos"/>
+                    <field name="telefono" placeholder="Teléfono"/>
+                    <field name="horario" placeholder="Horario"/>								
+                    <field name="especialidad" placeholder="Especialidad"/>
+                    <field name="sexo" placeholder="Sexo"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo gym.instructores -->	
+		<record model="ir.ui.view" id="gym_instructores_search_tree">
+			<field name="name">gym.instructores.tree</field>
+			<field name="model">gym.instructores</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Instructores" >
+						<field name="name" />
+						<field name="nombre_inst" />
+						<field name="telefono" />
+						<field name="horario" />
+						<field name="especialidad" />
+						<field name="sexo" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="gym_instructores_search">
+			<field name="name">gym.instructores.search</field>
+			<field name="model">gym.instructores</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="nombre_inst" />
+					<field name="telefono" />
+					<field name="horario" />
+					<field name="especialidad" />
+					<field name="sexo" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO gym.instructores -->	
+		<record id="gym_instructores_action" model="ir.actions.act_window">
+			<field name="name">Instructores</field>
+			<field name="res_model">gym.instructores</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+</odoo>

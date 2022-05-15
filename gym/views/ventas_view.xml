@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo gym.ventas -->	
+		<record model="ir.ui.view" id="ventas_form">
+		<field name="name">gym.ventas.form</field>
+		<field name="model">gym.ventas</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de la ventas">
+                    <field name="name" placeholder="NumCompra" />
+                    <field name="nombre" placeholder="Nombre del producto"/>
+                    <field name="socios" placeholder="Socios"/>
+                    <field name="fecha" placeholder="Fecha"/>							
+                    <field name="costo" placeholder="Costo"/>
+                    <field name="cantidad" placeholder="Cantidad"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo gym.ventas -->	
+		<record model="ir.ui.view" id="gym_ventas_tree">
+			<field name="name">gym.ventas.tree</field>
+			<field name="model">gym.ventas</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="ventas" >
+						<field name="name" />
+						<field name="nombre" />
+						<field name="socios"/>
+						<field name="fecha" />
+						<field name="costo" />
+						<field name="cantidad" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="gym_ventas_search">
+			<field name="name">gym.ventas.search</field>
+			<field name="model">gym.ventas</field>
+			<field name="arch" type="xml">
+				<search>
+						<field name="name" />
+						<field name="nombre" />
+						<field name="socios"/>
+						<field name="fecha" />
+						<field name="costo" />
+						<field name="cantidad" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO gym.ventas -->	
+		<record id="gym_ventas_action" model="ir.actions.act_window">
+			<field name="name">Ventas</field>
+			<field name="res_model">gym.ventas</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+</odoo>

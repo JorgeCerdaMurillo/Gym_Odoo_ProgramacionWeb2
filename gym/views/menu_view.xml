@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Gym" id="gym_menu" sequence="20" />
+			<menuitem name="Catalagos" id="gym_catalogos_menu" parent="gym_menu" sequence="10"/>
+				<menuitem name="Socios" action="gym_socios_action"  id="gym_socios_menu" sequence="20" parent="gym_catalogos_menu" />
+				<menuitem name="Servicios" action="gym_servicios_action"  id="gym_servicios_menu" sequence="30" parent="gym_catalogos_menu" />
+				<menuitem name="Instructores" action="gym_instructores_action"  id="gym_instructores_menu" sequence="30" parent="gym_catalogos_menu" />
+
+
+			<menuitem name="Procesos" id="gym_procesos_menu" parent="gym_menu" sequence="20"/>
+				<menuitem name="Productos" action="gym_productos_action" id="gym_productos_menu" sequence="10" parent="gym_procesos_menu" />
+				<menuitem name="Compras" action="gym_compras_action" id="gym_compras_menu" sequence="20" parent="gym_procesos_menu" />
+				<menuitem name="Ventas" action="gym_ventas_action" id="gym_ventas_menu" sequence="30" parent="gym_procesos_menu" />
+
+	</data>
+</odoo>
