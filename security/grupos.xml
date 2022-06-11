@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="gym_id" model="ir.module.category">
+            <field name="name">Socios Gym</field>
+        </record>
+        <record id="gym_admin" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="category_id" ref="gym_id"/>
+        </record>
+    </data>
+</odoo>

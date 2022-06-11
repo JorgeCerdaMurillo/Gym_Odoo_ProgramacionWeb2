@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo tree del modelo escolares.carreras -->	
+		<record model="ir.ui.view" id="gym_servicios_tree">
+			<field name="name">gym.servicios.tree</field>
+			<field name="model">gym.servicios</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="servicios" editable="top" >
+						<field name="name" />
+						<field name="nombre" />
+						<field name="costo"/>
+				</tree>
+			</field>
+		</record>
+
+
+		<record model="ir.ui.view" id="gym_servicios_search">
+			<field name="name">gym.servicios.search</field>
+			<field name="model">gym.servicios</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="nombre" />
+					<field name="costo"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- ACCION PARA EL MODELO escolares.carreras -->	
+		<record id="gym_servicios_action" model="ir.actions.act_window">
+			<field name="name">Servicios</field>
+			<field name="res_model">gym.servicios</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+
+</odoo>

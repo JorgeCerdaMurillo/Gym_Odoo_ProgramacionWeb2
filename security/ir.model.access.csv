@@ -1,0 +1,7 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+admin_compras_1,admin_compras,model_gym_compras,gym_admin,1,1,1,1
+admin_instructores_1,admin_instructores,model_gym_instructores,gym_admin,1,1,1,1
+admin_productos_1,admin_productos,model_gym_productos,gym_admin,1,1,1,1
+admin_servicios_1,admin_servicios,model_gym_servicios,gym_admin,1,1,1,1
+admin_socios_1,admin_socios,model_gym_socios,gym_admin,1,1,1,1
+admin_ventas_1,admin_ventas,model_gym_ventas,gym_admin,1,1,1,1
